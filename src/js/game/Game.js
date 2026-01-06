@@ -21,10 +21,10 @@ export default class Game {
       const cell = document.createElement("div");
       cell.classList.add("cell");
       cell.id = "cell-" + i;
-      this.container.appendChild(cell);
+      this.container.append(cell);
     }
 
-    gameContainer.appendChild(this.container);
+    gameContainer.append(this.container);
   }
 
   start() {
@@ -32,7 +32,7 @@ export default class Game {
       let goblinPosition = this.goblin.move();
       document
         .getElementById(`cell-${goblinPosition}`)
-        .appendChild(this.goblin.element);
+        .append(this.goblin.element);
     }, 1000);
   }
 }
